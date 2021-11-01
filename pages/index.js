@@ -1,24 +1,27 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../components/Navbar";
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
-import Hero from '../components/Hero'
+import Hero from "../components/Hero";
 import News from '../components/News'
-import Announcement from '../components/Announcement'
+// import Announcement from '../components/Announcement'
 import Product from '../components/Product'
-import Profile from '../components/Profile'
+import Profile from "../components/Profile";
 
 function index() {
   return (
     <div>
-      <Hero/>
-      <Profile/>
+      <Navbar />
+      <Hero />
       <Product/>
+      <Profile />
       <News/>
-      <Announcement/>
+      {/*<Product/>
+      <Announcement/>*/}
       <Contact/>
-      <Footer/>
+      <Footer/> 
     </div>
-  )
+  );
 }
 
-export default index
+export default index;

@@ -1,3 +1,4 @@
+const plugin = require("tailwindcss/plugin")
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -6,7 +7,19 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundAttachment: ['hover', 'focus']
+    },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addUtilities}){
+      const utilities = {
+        ".bg-hero": {
+          "background-image": "url(/hero42.jpg)"
+        }
+      };
+
+      addUtilities(utilities);
+    })
+  ],
 }
